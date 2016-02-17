@@ -15,7 +15,6 @@ $(document).ready(function () {
         $("input[name='email']").val()
       ));
 
-      //$('tbody').val('');//TODO: probably doesn't work
       users.forEach(function(user){
         $("tbody").append(
           '<tr>' +
