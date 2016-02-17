@@ -2,19 +2,20 @@ $(document).ready(function () {
   $("button.add-user").click(function () {
     $("input[name='username']").val('').focus();
     $("input[name='email']").val('').focus();
+});
     $("button.submit").click(function () {
       var users = [];
       var User = function (name, email) {
         this.name = name;
         this.email = email;
       }
+
       users.push(new User(
         $("input[name='username']").val(),
         $("input[name='email']").val()
       ));
 
       //$('tbody').val('');//TODO: probably doesn't work
-      $('tbody').empty();
       users.forEach(function(user){
         $("tbody").append(
           '<tr>' +
@@ -27,7 +28,5 @@ $(document).ready(function () {
           '</tr>'
         );
       });
-      users.shift();
     });
-  });
 });
