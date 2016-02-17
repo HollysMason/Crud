@@ -3,17 +3,17 @@ $(document).ready(function () {
     $("input[name='username']").val('').focus();
     $("input[name='email']").val('').focus();
   });
-    $("button.submit").click(function () {
-      var users = [];
-      var User = function (name, email) {
-        this.name = name;
-        this.email = email;
-      }
-      users.push(new User(
-        $("input[name='username']").val(),
-        $("input[name='email']").val()
-      ));
-      users.forEach(function(user){
+  $("button.submit").click(function () {
+    var users = [];
+    var User = function (name, email) {
+      this.name = name;
+      this.email = email;
+    }
+    users.push(new User(
+      $("input[name='username']").val(),
+      $("input[name='email']").val()
+    ));
+    users.forEach(function(user){
       $("tbody").append(
         '<tr>' +
           '<td class="name">' + user.name + '</td>' +
