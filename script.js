@@ -13,7 +13,8 @@ $(document).ready(function () {
         $("input[name='email']").val()
       ));
 
-      $('tbody').val('');//TODO: probably doesn't work
+      //$('tbody').val('');//TODO: probably doesn't work
+      $('tbody').empty();
       users.forEach(function(user){
         $("tbody").append(
           '<tr>' +
@@ -26,6 +27,7 @@ $(document).ready(function () {
           '</tr>'
         );
       });
+      users.shift();
     });
   });
 });
